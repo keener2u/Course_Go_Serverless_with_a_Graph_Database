@@ -8,5 +8,12 @@
 "features": {
 	"ghcr.io/devcontainers/features/aws-cli:1": {},
 	"ghcr.io/devcontainers-contrib/features/serverless:2": {}
+},
+"customizations": {
+	"vscode": {
+		"extensions": [
+			"ms-vscode-remote.vscode-remote-extensionpack"
+		]
+	}
 }
 }
