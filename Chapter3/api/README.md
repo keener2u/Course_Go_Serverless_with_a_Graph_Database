@@ -29,3 +29,5 @@ Note: if using an AWS profile, use the --aws-profile switch, e.g.
 ```
 sls deploy --aws-profile go-serverless-graphdb
 ```
+
+Issues with new version of node use export ENV NODE_OPTIONS="--openssl-legacy-provider"
