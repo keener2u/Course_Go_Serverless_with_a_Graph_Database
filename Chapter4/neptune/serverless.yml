@@ -13,6 +13,9 @@ resources:
     NeptuneDBCluster:
       Type: "AWS::Neptune::DBCluster"
       Properties:
+        ServerlessScalingConfiguration: 
+          MinCapacity: 1.0 
+          MaxCapacity: 128.0
         DBSubnetGroupName:
           Ref: NeptuneDBSubnetGroup
         VpcSecurityGroupIds:
@@ -32,7 +35,7 @@ resources:
       Properties:
         DBClusterIdentifier:
           Ref: "NeptuneDBCluster"
-        DBInstanceClass: "db.r4.xlarge"
+        DBInstanceClass: "db.serverless"
       DependsOn:
         - "NeptuneDBCluster"
 
